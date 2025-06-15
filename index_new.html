@@ -160,46 +160,7 @@
                         </p>
                     </div>
                     <div class="content has-text-centered">
-                        <img class="method-diagram" src="./images/system.jpg"
-                            alt="WildCAT3D Method Overview">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Appearance Control Section -->
-    <section class="section">
-        <div class="container is-max-desktop">
-            <div class="appearance-control">
-                <h2 class="title is-3 has-text-centered">Novel Appearance Control</h2>
-                <div class="content has-text-centered">
-                    <p class="appearance-control-text">
-                        Our explicit modeling of appearance enables novel applications such as text-controlled
-                        appearance generation and interpolation between different appearance conditions.
-                    </p>
-                    <div class="results-grid">
-                        <div class="result-item">
-                            <img src="./resources/appearance_control_1.jpg" alt="Sunny to Rainy">
-                            <div class="content">
-                                <h4>Weather Control</h4>
-                                <p>Generate the same scene under different weather conditions</p>
-                            </div>
-                        </div>
-                        <div class="result-item">
-                            <img src="./resources/appearance_control_2.jpg" alt="Day to Night">
-                            <div class="content">
-                                <h4>Lighting Control</h4>
-                                <p>Transform between day and night appearances</p>
-                            </div>
-                        </div>
-                        <div class="result-item">
-                            <img src="./resources/appearance_control_3.jpg" alt="Season Control">
-                            <div class="content">
-                                <h4>Seasonal Control</h4>
-                                <p>Change seasonal appearance while maintaining geometry</p>
-                            </div>
-                        </div>
+                        <img class="method-diagram" src="./images/system.jpg" alt="WildCAT3D Method Overview">
                     </div>
                 </div>
             </div>
@@ -214,9 +175,13 @@
                     <h2 class="title is-3">Results</h2>
                     <div class="content has-text-justified">
                         <p>
-                            WildCAT3D demonstrates superior performance on standard NVS benchmarks while training on
-                            diverse in-the-wild data. Our method excels at generating consistent novel views for both
-                            object-centric and scene-level scenarios.
+                            WildCAT3D demonstrates superior performance on standard novel view synthesis benchmarks
+                            while
+                            training on diverse in-the-wild data. Our method excels at generating consistent novel views
+                            from single input images using various camera trajectories including lateral turns,
+                            zoom-outs,
+                            and NeRF-like circular paths. We achieve state-of-the-art results on both object-centric and
+                            scene-level novel view synthesis tasks.
                         </p>
                     </div>
 
@@ -226,8 +191,9 @@
                                 <source src="./resources/result_1.mp4" type="video/mp4">
                             </video>
                             <div class="content">
-                                <h4>Tourist Photo Reconstruction</h4>
-                                <p>Novel views generated from single tourist photos</p>
+                                <h4>Circular Camera Trajectories</h4>
+                                <p>Novel views generated with NeRF-like circular camera paths from single input images
+                                </p>
                             </div>
                         </div>
                         <div class="result-item">
@@ -235,8 +201,8 @@
                                 <source src="./resources/result_2.mp4" type="video/mp4">
                             </video>
                             <div class="content">
-                                <h4>Architectural Scenes</h4>
-                                <p>Consistent view synthesis for complex architectural structures</p>
+                                <h4>Lateral Camera Movements</h4>
+                                <p>Consistent view synthesis with lateral turn trajectories</p>
                             </div>
                         </div>
                         <div class="result-item">
@@ -244,17 +210,43 @@
                                 <source src="./resources/result_3.mp4" type="video/mp4">
                             </video>
                             <div class="content">
-                                <h4>Natural Landscapes</h4>
-                                <p>High-quality novel views of natural outdoor scenes</p>
+                                <h4>Zoom-Out Trajectories</h4>
+                                <p>High-quality novel views with zoom-out camera motions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="appearance-control">
+                <h2 class="title is-3 has-text-centered">Applications</h2>
+                <div class="content has-text-centered">
+                    <p class="appearance-control-text">
+                        Our explicit modeling of appearance enables novel applications beyond standard novel view
+                        synthesis.
+                        These include appearance-controlled generation using external conditioning images and
+                        interpolation
+                        between views with differing appearances.
+                    </p>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <img src="./resources/appearance_control_1.jpg" alt="Appearance conditioning example">
+                            <div class="content">
+                                <h4>Appearance-Controlled Generation</h4>
+                                <p>Generate novel views with appearance from external conditioning images</p>
                             </div>
                         </div>
                         <div class="result-item">
-                            <video autoplay muted loop playsinline>
-                                <source src="./resources/result_4.mp4" type="video/mp4">
-                            </video>
+                            <img src="./resources/interpolation_example.jpg"
+                                alt="Interpolation between different appearances">
                             <div class="content">
-                                <h4>Urban Environments</h4>
-                                <p>Robust performance on complex urban scenes</p>
+                                <h4>In-the-Wild Interpolation</h4>
+                                <p>Interpolate between views of scenes with differing appearances</p>
                             </div>
                         </div>
                     </div>
