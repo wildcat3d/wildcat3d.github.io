@@ -172,11 +172,38 @@
 
 .comparison-videos {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin: 2rem 0;
 }
 
 .comparison-item {
     text-align: center;
+}
+
+.comparison-item img {
+    width: 100%;
+    max-width: 225px;  /* Set consistent max width */
+    height: 300px;     /* Set consistent height */
+    object-fit: cover; /* Crop to fill consistently */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.good-comparison-item {
+    position: relative;
+    z-index: 1;
+}
+
+.good-comparison-item::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 12px;
+    z-index: -1;
+    background: radial-gradient(circle, rgba(255,215,0,0.25) 0%, rgba(255,215,0,0) 80%);
+    box-shadow: 0 0 20px 6px rgba(255, 215, 0, 0.3); /* subtle golden halo */
 }

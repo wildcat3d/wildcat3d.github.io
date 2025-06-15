@@ -220,6 +220,42 @@
         </div>
     </section>
 
+    <!-- Comparison Section -->
+    <section class="section">
+        <div class="container is-max-desktop">
+            <div class="comparison-section">
+                <h2 class="title is-3 has-text-centered">Comparison with Prior Work</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        WildCAT3D significantly outperforms the previous SOTA MegaScenes NVS model (MS NVS) at
+                        generating consistent and high-quality novel view sequences from single images. Our method
+                        achieves superior performance while training on unfiltered data in-the-wild, unlike the
+                        aggressive filtering
+                        used by prior methods.
+                    </p>
+                </div>
+                <div class="comparison-videos">
+                    <div class="comparison-item">
+                        <h4 class="title is-5">MS NVS</h4>
+                        <img src="./videos/comparisons/gavi_ms.gif" alt="MS NVS result">
+                    </div>
+                    <div class="comparison-item good-comparison-item">
+                        <h4 class="title is-5">Ours</h4>
+                        <img src="./videos/comparisons/gavi_ours.gif" alt="Our result">
+                    </div>
+                    <div class="comparison-item">
+                        <h4 class="title is-5">MS NVS</h4>
+                        <img src="./videos/comparisons/wawel_ms.gif" alt="MS NVS result">
+                    </div>
+                    <div class="comparison-item good-comparison-item">
+                        <h4 class="title is-5">Ours</h4>
+                        <img src="./videos/comparisons/wawel_ours.gif" alt="Our result">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Applications Section -->
     <section class="section">
         <div class="container is-max-desktop">
@@ -271,38 +307,6 @@
                                 <p>End View</p>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Comparison Section -->
-    <section class="section">
-        <div class="container is-max-desktop">
-            <div class="comparison-section">
-                <h2 class="title is-3 has-text-centered">Comparison with Prior Work</h2>
-                <div class="content has-text-justified">
-                    <p>
-                        WildCAT3D significantly outperforms the previous SOTA MegaScenes NVS model (MS NVS) at
-                        generating consistent and high-quality novel view sequences from single images. Our method
-                        achieves superior performance while training on unfiltered data in-the-wild, unlike the
-                        aggressive filtering
-                        used by prior methods.
-                    </p>
-                </div>
-                <div class="comparison-videos">
-                    <div class="comparison-item">
-                        <h4 class="title is-5">MS NVS (Previous SOTA)</h4>
-                        <video autoplay muted loop playsinline>
-                            <source src="./resources/ms_nvs_comparison.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="comparison-item">
-                        <h4 class="title is-5">WildCAT3D (Ours)</h4>
-                        <video autoplay muted loop playsinline>
-                            <source src="./resources/wildcat3d_comparison.mp4" type="video/mp4">
-                        </video>
                     </div>
                 </div>
             </div>
