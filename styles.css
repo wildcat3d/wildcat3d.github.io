@@ -224,8 +224,10 @@
 }
 
 .teaser .io-img {
-    max-width: 100%;
-    max-height: 512px;
+    height: 100%;
+    max-height: 160px;
+    width: 512px;
+    object-fit: cover;
 }
 
 .teaser .train-collage-img {
