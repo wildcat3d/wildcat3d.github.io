@@ -236,3 +236,19 @@
     max-height: 300px;
     object-fit: cover;
 }
+
+/* Mobile-only adjustments */
+@media screen and (max-width: 768px) {
+    /* Make teaser figures consistent width on mobile */
+    .teaser .io-img {
+        width: 300px;
+    }
+    .teaser .train-collage-img {
+        width: 90%;
+    }
+    
+    /* Change comparison videos to 2x2 grid on mobile */
+    .comparison-videos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
