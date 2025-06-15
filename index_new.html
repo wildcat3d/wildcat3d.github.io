@@ -148,15 +148,12 @@
                         <p>
                             Our key insight is that inconsistent data can be leveraged during multi-view diffusion
                             training to learn consistent generation, by specifically decoupling content and appearance
-                            when denoising novel views. Starting from the multi-view diffusion framework, we propose to
-                            explicitly integrate a feed-forward appearance model that captures the appearance properties
-                            of input views.
-                        </p>
-                        <p>
+                            when denoising novel views. Starting from a multi-view diffusion framework, we propose to
+                            explicitly integrate a feed-forward, generalizeable appearance encoder that models appearance
+                            variations between scene views.
                             We add an appearance encoding branch to produce low-dimensional appearance embeddings used
                             as conditioning signals for the multi-view diffusion model. Additionally, we employ a warp
-                            conditioning mechanism that warps pixels from the source view following the target viewpoint
-                            using depth information, helping resolve scale ambiguity inherent to single-view NVS.
+                            conditioning mechanism to resolve the scale ambiguity inherent to single-view NVS.
                         </p>
                     </div>
                     <div class="content has-text-centered">
