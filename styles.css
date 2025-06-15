@@ -169,3 +169,14 @@
     font-size: 0.9rem;
     color: #666;
 }
+
+.comparison-videos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.comparison-item {
+    text-align: center;
+}
