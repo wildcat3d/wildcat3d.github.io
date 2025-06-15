@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WildCAT Video Results</title>
+    <title>WildCAT3D Video Results</title>
     <style>
         * {
             margin: 0;
@@ -286,7 +286,7 @@
         </a>
 
         <!-- Title centered -->
-        <h1 style="font-size: 2rem; font-weight: 300; margin: 0;">WildCAT Video Results</h1>
+        <h1 style="font-size: 2rem; font-weight: 300; margin: 0;">WildCAT3D Video Results</h1>
     </div>
 
     <div class="container">
@@ -306,7 +306,7 @@
         <div id="inference" class="tab-content active">
             <h2 class="section-title">Novel View Synthesis Inference</h2>
             <div class="section-description">
-                <p>Results showing vanilla WildCAT inference for novel view synthesis with various hard-coded
+                <p>Results showing vanilla WildCAT3D inference for novel view synthesis with various hard-coded
                     trajectories including lateral turns, zoom-outs, and NeRF-like circular paths. Each result shows the
                     input view and video showing generated novel views.</p>
             </div>
@@ -328,7 +328,7 @@
             <h2 class="section-title">Appearance-Controlled Generation</h2>
             <div class="section-description">
                 <p>Results demonstrating appearance control during generation. By injecting appearance embeddings from
-                    external images, WildCAT can generate novel views while editing scene appearance (e.g., generating
+                    external images, WildCAT3D can generate novel views while editing scene appearance (e.g., generating
                     nighttime scenes from daytime photos). Each result shows the appearance conditioning image,
                     generated view, and input view for comparison.</p>
             </div>
@@ -349,7 +349,7 @@
         <div id="interpolation" class="tab-content">
             <h2 class="section-title">In-the-Wild Interpolation</h2>
             <div class="section-description">
-                <p>Results showing interpolation between views of scenes with differing appearances. WildCAT fine-tuned
+                <p>Results showing interpolation between views of scenes with differing appearances. WildCAT3D fine-tuned
                     with two observed input views can interpolate between them to produce static videos with consistent
                     appearance. Two interpolations are provided for each scene: one using the start view's appearance
                     and another using the end view's appearance throughout the trajectory.</p>
