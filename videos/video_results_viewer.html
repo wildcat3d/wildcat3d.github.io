@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +24,7 @@
             color: white;
             padding: 2rem 0;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .header h1 {
@@ -50,7 +51,7 @@
             display: flex;
             background: white;
             border-radius: 10px;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
             margin-bottom: 2rem;
             overflow: hidden;
         }
@@ -83,7 +84,7 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, 0.3);
         }
 
         .tab-content {
@@ -107,7 +108,7 @@
             padding: 1.5rem;
             border-radius: 10px;
             margin-bottom: 2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             border-left: 4px solid #667eea;
         }
 
@@ -120,13 +121,13 @@
             background: white;
             border-radius: 15px;
             padding: 1.5rem;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .result-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
         }
 
         .result-title {
@@ -163,7 +164,7 @@
         .media-content {
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
             cursor: pointer;
         }
@@ -172,7 +173,8 @@
             transform: scale(1.02);
         }
 
-        .media-content img, .media-content video {
+        .media-content img,
+        .media-content video {
             width: 100%;
             height: auto;
             display: block;
@@ -200,8 +202,13 @@
         }
 
         @keyframes loading {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
+            0% {
+                background-position: 200% 0;
+            }
+
+            100% {
+                background-position: -200% 0;
+            }
         }
 
         .inference-grid {
@@ -217,7 +224,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.9);
+            background: rgba(0, 0, 0, 0.9);
             z-index: 1000;
             align-items: center;
             justify-content: center;
@@ -253,7 +260,7 @@
             padding: 1.5rem;
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
         .stat-number {
@@ -268,9 +275,18 @@
         }
     </style>
 </head>
+
 <body>
-    <div class="header">
-        <h1>WildCAT Video Results</h1>
+    <div class="header"
+        style="display: flex; align-items: center; justify-content: center; position: relative; padding: 1.5rem 2rem;">
+        <!-- Back button aligned left -->
+        <a href="../index_new.html" style="position: absolute; left: 2rem; padding: 0.4rem 1rem; background: white; color: #667eea; border-radius: 5px;
+              text-decoration: none; font-weight: 500; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+            ← Back
+        </a>
+
+        <!-- Title centered -->
+        <h1 style="font-size: 2rem; font-weight: 300; margin: 0;">WildCAT Video Results</h1>
     </div>
 
     <div class="container">
@@ -290,9 +306,11 @@
         <div id="inference" class="tab-content active">
             <h2 class="section-title">Novel View Synthesis Inference</h2>
             <div class="section-description">
-                <p>Results showing vanilla WildCAT inference for novel view synthesis with various hard-coded trajectories including lateral turns, zoom-outs, and NeRF-like circular paths. Each result shows the input view and video showing generated novel views.</p>
+                <p>Results showing vanilla WildCAT inference for novel view synthesis with various hard-coded
+                    trajectories including lateral turns, zoom-outs, and NeRF-like circular paths. Each result shows the
+                    input view and video showing generated novel views.</p>
             </div>
-            
+
             <div class="stats" id="inference-stats">
                 <div class="stat-card">
                     <div class="stat-number" id="inference-count">0</div>
@@ -309,7 +327,10 @@
         <div id="appearance" class="tab-content">
             <h2 class="section-title">Appearance-Controlled Generation</h2>
             <div class="section-description">
-                <p>Results demonstrating appearance control during generation. By injecting appearance embeddings from external images, WildCAT can generate novel views while editing scene appearance (e.g., generating nighttime scenes from daytime photos). Each result shows the appearance conditioning image, generated view, and input view for comparison.</p>
+                <p>Results demonstrating appearance control during generation. By injecting appearance embeddings from
+                    external images, WildCAT can generate novel views while editing scene appearance (e.g., generating
+                    nighttime scenes from daytime photos). Each result shows the appearance conditioning image,
+                    generated view, and input view for comparison.</p>
             </div>
 
             <div class="stats" id="appearance-stats">
@@ -328,7 +349,10 @@
         <div id="interpolation" class="tab-content">
             <h2 class="section-title">In-the-Wild Interpolation</h2>
             <div class="section-description">
-                <p>Results showing interpolation between views of scenes with differing appearances. WildCAT fine-tuned with two observed input views can interpolate between them to produce static videos with consistent appearance. Two interpolations are provided for each scene: one using the start view's appearance and another using the end view's appearance throughout the trajectory.</p>
+                <p>Results showing interpolation between views of scenes with differing appearances. WildCAT fine-tuned
+                    with two observed input views can interpolate between them to produce static videos with consistent
+                    appearance. Two interpolations are provided for each scene: one using the start view's appearance
+                    and another using the end view's appearance throughout the trajectory.</p>
             </div>
 
             <div class="stats" id="interpolation-stats">
@@ -356,7 +380,7 @@
         // Global state
         let currentTab = 'inference';
         let loadedTabs = new Set(['inference']); // Start with inference loaded
-        
+
         // File structure based on actual directory structure
         const fileStructure = {
             inference: {
@@ -384,20 +408,20 @@
             document.querySelectorAll('.tab-content').forEach(content => {
                 content.classList.remove('active');
             });
-            
+
             // Remove active class from all tabs
             document.querySelectorAll('.nav-tab').forEach(tab => {
                 tab.classList.remove('active');
             });
-            
+
             // Show selected tab content
             document.getElementById(tabName).classList.add('active');
-            
+
             // Add active class to clicked tab
             event.target.classList.add('active');
-            
+
             currentTab = tabName;
-            
+
             // Load content if not already loaded
             if (!loadedTabs.has(tabName)) {
                 loadTabContent(tabName);
@@ -406,7 +430,7 @@
         }
 
         function loadTabContent(tabName) {
-            switch(tabName) {
+            switch (tabName) {
                 case 'inference':
                     loadInferenceResults();
                     break;
@@ -422,15 +446,15 @@
         function loadInferenceResults() {
             const container = document.getElementById('inference-results');
             const countElement = document.getElementById('inference-count');
-            
+
             const scenes = Object.keys(fileStructure.inference);
             countElement.textContent = scenes.length;
-            
+
             scenes.forEach((sceneName) => {
                 const viewIndices = fileStructure.inference[sceneName];
                 const resultItem = document.createElement('div');
                 resultItem.className = 'result-item';
-                
+
                 // Clean up scene name for display
                 const displayName = sceneName
                     .replace(/images-\d+-\d+-commons-/, '')
@@ -438,7 +462,7 @@
                     .replace(/[_()]/g, ' ')
                     .replace(/Ã\u0081/g, 'á')
                     .replace(/Ã\u0089/g, 'é');
-                
+
                 let mediaHtml = '';
                 viewIndices.forEach(index => {
                     mediaHtml += `
@@ -458,17 +482,17 @@
                         </div>
                     `;
                 });
-                
+
                 resultItem.innerHTML = `
                     <div class="result-title">Scene: ${displayName}</div>
                     <div class="media-container">
                         ${mediaHtml}
                     </div>
                 `;
-                
+
                 container.appendChild(resultItem);
             });
-            
+
             // Lazy load images when they come into view
             observeImages();
         }
@@ -476,14 +500,14 @@
         function loadAppearanceResults() {
             const container = document.getElementById('appearance-results');
             const countElement = document.getElementById('appearance-count');
-            
+
             const indices = fileStructure.appearance;
             countElement.textContent = indices.length;
-            
+
             indices.forEach(i => {
                 const resultItem = document.createElement('div');
                 resultItem.className = 'result-item';
-                
+
                 resultItem.innerHTML = `
                     <div class="result-title">Appearance-Controlled Generation ${i}</div>
                     <div class="media-container">
@@ -510,24 +534,24 @@
                         </div>
                     </div>
                 `;
-                
+
                 container.appendChild(resultItem);
             });
-            
+
             observeImages();
         }
 
         function loadInterpolationResults() {
             const container = document.getElementById('interpolation-results');
             const countElement = document.getElementById('interpolation-count');
-            
+
             const sequences = fileStructure.interpolation;
             countElement.textContent = sequences.length;
-            
+
             sequences.forEach(seqNum => {
                 const resultItem = document.createElement('div');
                 resultItem.className = 'result-item';
-                
+
                 resultItem.innerHTML = `
                     <div class="result-title">Interpolation Sequence ${seqNum}</div>
                     <div class="media-container">
@@ -561,10 +585,10 @@
                         </div>
                     </div>
                 `;
-                
+
                 container.appendChild(resultItem);
             });
-            
+
             observeImages();
         }
 
@@ -574,7 +598,7 @@
                     if (entry.isIntersecting) {
                         const img = entry.target;
                         const placeholder = img.previousElementSibling;
-                        
+
                         img.src = img.dataset.src;
                         img.onload = () => {
                             img.classList.add('loaded');
@@ -582,7 +606,7 @@
                                 placeholder.style.display = 'none';
                             }
                         };
-                        
+
                         observer.unobserve(img);
                     }
                 });
@@ -596,7 +620,7 @@
         function openFullscreen(src, type) {
             const overlay = document.getElementById('fullscreen-overlay');
             const mediaContainer = document.getElementById('fullscreen-media');
-            
+
             let mediaElement;
             if (type === 'gif' || type === 'image') {
                 mediaElement = document.createElement('img');
@@ -604,7 +628,7 @@
                 mediaElement.style.maxWidth = '100%';
                 mediaElement.style.maxHeight = '100%';
             }
-            
+
             mediaContainer.innerHTML = '';
             mediaContainer.appendChild(mediaElement);
             overlay.style.display = 'flex';
@@ -615,16 +639,17 @@
         }
 
         // Initialize the page
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             loadInferenceResults();
         });
 
         // Handle escape key for fullscreen
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 closeFullscreen();
             }
         });
     </script>
 </body>
+
 </html>
