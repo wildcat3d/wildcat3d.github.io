@@ -94,16 +94,43 @@
         </div>
     </section>
 
-    <!-- Teaser Video Section -->
     <section class="hero teaser">
         <div class="container is-max-desktop">
             <div class="hero-body">
-                <video class="teaser-video" autoplay muted loop playsinline>
-                    <source src="./resources/teaser_video.mp4" type="video/mp4">
-                </video>
-                <h2 class="subtitle has-text-centered teaser-subtitle">
-                    WildCAT3D learns from in-the-wild image collections with diverse appearances,
-                    enabling consistent novel view synthesis from a single image with controllable appearance.
+                <div class="columns is-centered is-variable is-6 is-multiline teaser-grid">
+
+                    <!-- Top: Training data collage -->
+                    <div class="column is-12 has-text-centered">
+                        <img src="./images/wild_training_collage.jpg"
+                            alt="Training data: collage of scene images under varying conditions"
+                            class="train-collage-img">
+                        <p class="mt-2">
+                            <strong>Training:</strong> Internet image collections captured <em>in-the-wild</em>.
+                        </p>
+                    </div>
+
+                    <!-- Input + Output row wrapped for centering -->
+                    <div class="columns is-centered is-variable is-6">
+                        <div class="column is-4 has-text-centered">
+                            <img src="./videos/inference/images-014-126-commons-Pont_de_la_Caille-0-pictures/gt0.png"
+                                alt="Input view (single image)"
+                                class="io-img">
+                            <p><strong>Input (Single View)</strong></p>
+                        </div>
+                        <div class="column is-4 has-text-centered">
+                            <img src="./videos/inference/images-014-126-commons-Pont_de_la_Caille-0-pictures/gen0.gif"
+                                alt="Generated novel views from WildCAT3D"
+                                class="io-img">
+                            <p><strong>Output (Novel Consistent Views)</strong></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Subtitle -->
+                <h2 class="subtitle has-text-centered teaser-subtitle mt-4">
+                    WildCAT3D learns from in-the-wild image collections with diverse appearances, enabling consistent
+                    novel view synthesis from a single image.
                 </h2>
             </div>
         </div>
@@ -150,7 +177,8 @@
                             Our key insight is that inconsistent data can be leveraged during multi-view diffusion
                             training to learn consistent generation, by specifically decoupling content and appearance
                             when denoising novel views. Starting from a multi-view diffusion framework, we propose to
-                            explicitly integrate a feed-forward, generalizeable appearance encoder that models appearance
+                            explicitly integrate a feed-forward, generalizeable appearance encoder that models
+                            appearance
                             variations between scene views.
                             We add an appearance encoding branch to produce low-dimensional appearance embeddings used
                             as conditioning signals for the multi-view diffusion model. Additionally, we employ a warp
