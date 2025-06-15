@@ -139,3 +139,33 @@
     padding: 1rem;
     border-radius: 8px;
 }
+
+.application-demo {
+    margin: 3rem 0;
+}
+
+.demo-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.demo-item {
+    text-align: center;
+    flex: 1;
+    max-width: 250px;
+}
+
+.demo-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.demo-item p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}

@@ -94,10 +94,10 @@ function loadInferenceResults() {
           </div>
         </div>
         <div class="media-item">
-          <div class="media-label">Generated ${index}</div>
+          <div class="media-label">Generated Novel Views ${index}</div>
           <div class="media-content" onclick="openFullscreen('inference/${sceneName}/gen${index}.gif', 'gif')">
             <div class="loading-placeholder">Loading...</div>
-            <img class="lazy-load" data-src="inference/${sceneName}/gen${index}.gif" alt="Generated ${index}">
+            <img class="lazy-load" data-src="inference/${sceneName}/gen${index}.gif" alt="Generated Novel Views ${index}">
           </div>
         </div>
       `;
@@ -146,10 +146,10 @@ function loadAppearanceResults() {
           </div>
         </div>
         <div class="media-item">
-          <div class="media-label">Generated Result</div>
+          <div class="media-label">Generated Novel Views </div>
           <div class="media-content" onclick="openFullscreen('applications/appearance_conditioned_gen/${i}_gen.gif', 'gif')">
             <div class="loading-placeholder">Loading...</div>
-            <img class="lazy-load" data-src="applications/appearance_conditioned_gen/${i}_gen.gif" alt="Generated ${i}">
+            <img class="lazy-load" data-src="applications/appearance_conditioned_gen/${i}_gen.gif" alt="Generated Novel Views ${i}">
           </div>
         </div>
       </div>

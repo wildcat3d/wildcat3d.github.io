@@ -227,26 +227,45 @@
                 <h2 class="title is-3 has-text-centered">Applications</h2>
                 <div class="content has-text-centered">
                     <p class="appearance-control-text">
-                        Our explicit modeling of appearance enables novel applications beyond standard novel view
-                        synthesis.
-                        These include appearance-controlled generation using external conditioning images and
-                        interpolation
-                        between views with differing appearances.
+                        Our explicit modeling of appearance enables novel applications such as appearance-controlled generation
+                        using external conditioning images and interpolation between views of differing appearances.
                     </p>
-                    <div class="results-grid">
-                        <div class="result-item">
-                            <img src="./resources/appearance_control_1.jpg" alt="Appearance conditioning example">
-                            <div class="content">
-                                <h4>Appearance-Controlled Generation</h4>
-                                <p>Generate novel views with appearance from external conditioning images</p>
+
+                    <!-- Appearance Control -->
+                    <div class="application-demo">
+                        <h4 class="title is-4">Appearance-Controlled Generation</h4>
+                        <div class="demo-row">
+                            <div class="demo-item">
+                                <img src="./applications/appearance_conditioned_gen/0_gt.png" alt="Input view">
+                                <p>Input View</p>
+                            </div>
+                            <div class="demo-item">
+                                <img src="./applications/appearance_conditioned_gen/0_appearance.png"
+                                    alt="Appearance condition">
+                                <p>Appearance Condition</p>
+                            </div>
+                            <div class="demo-item">
+                                <img src="./applications/appearance_conditioned_gen/0_gen.gif" alt="Generated result">
+                                <p>Generated Novel Views</p>
                             </div>
                         </div>
-                        <div class="result-item">
-                            <img src="./resources/interpolation_example.jpg"
-                                alt="Interpolation between different appearances">
-                            <div class="content">
-                                <h4>In-the-Wild Interpolation</h4>
-                                <p>Interpolate between views of scenes with differing appearances</p>
+                    </div>
+
+                    <!-- Interpolation -->
+                    <div class="application-demo">
+                        <h4 class="title is-4">In-the-Wild Interpolation</h4>
+                        <div class="demo-row">
+                            <div class="demo-item">
+                                <img src="./applications/interpolation/1_start.png" alt="Start view">
+                                <p>Start View</p>
+                            </div>
+                            <div class="demo-item">
+                                <img src="./applications/interpolation/1_interp.gif" alt="Generated interpolation sequence">
+                                <p>Generated Interpolation Sequence</p>
+                            </div>
+                            <div class="demo-item">
+                                <img src="./applications/interpolation/1_end.png" alt="End view">
+                                <p>End View</p>
                             </div>
                         </div>
                     </div>
