@@ -65,10 +65,10 @@ function loadTabContent(tabName) {
 
 function loadInferenceResults() {
     const container = document.getElementById('inference-results');
-    const countElement = document.getElementById('inference-count');
+    // const countElement = document.getElementById('inference-count');
     const scenes = Object.keys(fileStructure.inference);
 
-    countElement.textContent = scenes.length;
+    // countElement.textContent = scenes.length;
 
     scenes.forEach((sceneName) => {
         const viewIndices = fileStructure.inference[sceneName];
@@ -119,10 +119,10 @@ function loadInferenceResults() {
 
 function loadAppearanceResults() {
     const container = document.getElementById('appearance-results');
-    const countElement = document.getElementById('appearance-count');
+    // const countElement = document.getElementById('appearance-count');
     const indices = fileStructure.appearance;
 
-    countElement.textContent = indices.length;
+    // countElement.textContent = indices.length;
 
     indices.forEach(i => {
         const resultItem = document.createElement('div');
@@ -163,10 +163,10 @@ function loadAppearanceResults() {
 
 function loadInterpolationResults() {
     const container = document.getElementById('interpolation-results');
-    const countElement = document.getElementById('interpolation-count');
+    // const countElement = document.getElementById('interpolation-count');
     const sequences = fileStructure.interpolation;
 
-    countElement.textContent = sequences.length;
+    // countElement.textContent = sequences.length;
 
     sequences.forEach(seqNum => {
         const resultItem = document.createElement('div');

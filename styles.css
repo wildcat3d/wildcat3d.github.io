@@ -237,6 +237,10 @@
     object-fit: cover;
 }
 
+.additional-results-text {
+    
+}
+
 /* Mobile-only adjustments */
 @media screen and (max-width: 768px) {
 
